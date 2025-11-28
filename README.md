@@ -42,7 +42,7 @@ rosbag play ....bag
 TODO: Rosbag will be uploaded later
 ```
 
-### 3. Parameter modi配置文件路径：
+### 3. Parameter file path：
 ```
 isio/config/param.yaml
 ```
