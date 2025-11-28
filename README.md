@@ -4,6 +4,11 @@ Fast-isio is a fast and robust sonar inertial odometer system for underwater rob
 
 ---
 
+## 📡 Framework Architecture
+![system_architecture](img/framework.png)
+
+---
+
 ## 📦 Installation dependencies
 - Ubuntu 20.04
 - ROS Noetic
@@ -46,10 +51,6 @@ TODO: Rosbag will be uploaded later
 ```
 isio/config/param.yaml
 ```
----
-
-## 📡 Framework Architecture
-![system_architecture](img/framework.png)
 ---
 
 ## 🎥 Video Demo
