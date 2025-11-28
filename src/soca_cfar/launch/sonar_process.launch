@@ -1,0 +1,33 @@
+<launch>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="sonar_to_base_broadcaster" args="0.1 0.0 0.0 0 0 0 base_link sonar_link" />
+
+    <node pkg="soca_cfar" type="sonar_cfar" name="sonar_cfar" output="screen">
+        <param name="train_cells" type="int" value="12" />
+        <param name="guard_cells" type="int" value="4" />
+        <param name="Pfa" type="double" value="0.6" />
+
+        <param name="sonar_image_width" type="int" value="512" />
+        <param name="sonar_image_height" type="int" value="312" />
+        <param name="sonar_image_margin_ratio" type="double" value="0.05" />
+
+        <param name="sonar_horizon_fov" type="double" value="130" />
+        <param name="sonar_vertical_fov" type="double" value="20" />
+
+        <param name="adaptive_threshold_value" type="int" value="70" />
+
+        <param name="canny_threshold_low" type="int" value="30" />
+        <param name="canny_threshold_high" type="int" value="100" />
+
+
+        <param name="sonar_scan_range" type="double" value="15" />
+
+        <param name="sonar_scan_horizon_beam" type="int" value="512" />
+        <param name="sonar_scan_vertical_beam" type="int" value="256" />
+
+
+        <param name="voxel_grid_resolution" type="double" value="0.01" />
+
+    </node>
+
+
+</launch>

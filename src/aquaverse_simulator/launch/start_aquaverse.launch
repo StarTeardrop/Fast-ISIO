@@ -1,0 +1,16 @@
+<launch>
+
+    <node pkg="aquaverse_simulator" type="AquaRosGetMessage.py" name="AquaRosGetMessage" output="screen">
+        <param name="use_keyboard_control" value="true" />
+    </node>
+
+    <node pkg="aquaverse_simulator" type="SpeedHorizontalAttitudeControl.py" name="SpeedHorizontalAttitudeControl" output="screen"/>
+
+    <node pkg="aquaverse_simulator" type="PositionControl.py" name="PositionControl" output="screen"/>
+
+    <!-- <node pkg="aquaverse_simulator" type="CmdVelTest.py" name="CmdVelTest" output="screen"/> -->
+
+    <!-- <node pkg="aquaverse_simulator" type="PositionTest.py" name="PositionTest" output="screen"/> -->
+
+    
+</launch>

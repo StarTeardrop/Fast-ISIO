@@ -1,0 +1,36 @@
+<launch>
+
+    <include file="$(find aquaverse_simulator)/launch/start_aquaverse.launch" />
+
+
+    <include file="$(find soca_cfar)/launch/sonar_process.launch" />
+
+    <!-- load parameter yaml-->
+    <rosparam command="load" file="$(find isio)/config/param.yaml" />
+    <!-- start imuPreintegration node-->
+    <node pkg="isio" type="fast_isio_imuPreintegration" name="fast_isio_imuPreintegration" output="screen" />
+    <!-- start sonarProcess node-->
+    <node pkg="isio" type="fast_isio_sonarProcess" name="fast_isio_sonarProcess" output="screen" />
+    <!-- start featureExtraction node-->
+    <node pkg="isio" type="fast_isio_featureExtraction" name="fast_isio_featureExtraction" output="screen" />
+    <!-- start mapOptmization node-->
+    <node pkg="isio" type="fast_isio_mapOptmization" name="fast_isio_mapOptmization" output="screen" />
+
+    <node pkg="isio" type="fast_isio_globalGridMap" name="fast_isio_globalGridMap" output="screen" >
+        <param name="resolution" type="double" value="0.1" />
+        <param name="width" type="int" value="500" />
+        <param name="height" type="int" value="500" />
+        <param name="origin_x" type="double" value="-50" />
+        <param name="origin_y" type="double" value="-50" />
+        <param name="fov_deg" type="double" value="130" />
+        <param name="max_range" type="double" value="15" />
+        <param name="unknown_area_color" type="int" value="-1" />
+        <param name="explored_area_color" type="int" value="0" />
+        <param name="obstacle_color" type="int" value="100" />
+    </node>
+    
+    <param name="robot_description" textfile="$(find isio)/urdf/bluerov2.urdf" />
+
+    <node pkg="rviz" type="rviz" name="rviz_visual" args="-d $(find isio)/rviz/fast_isio.rviz" />
+
+</launch>
