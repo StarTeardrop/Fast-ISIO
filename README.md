@@ -55,11 +55,11 @@ isio/config/param.yaml
 
 ## 🎥 Video Demo
 
-### 1. Simulation Scene1
+### 1. Scene1
 
 ![simulation_scene1](video/1.gif)
 
-### 2. Simulation Scene2
+### 2. Scene2
 
 ![simulation_scene2](video/2.gif)
 
