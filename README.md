@@ -1,6 +1,6 @@
-# Fast-ISIO: Fast Imaging Sonar-Inertial Odometry for Underwater Robots via Geometric Linear Mapping
+# Fast-ISIO: Fast Imaging Sonar-Inertial Odometry for Underwater Robots via Geometric Linear Projection
 
-Fast-ISIO is a fast and robust sonar inertial odometey system for underwater robots. Through the tight coupling fusion of IMU pre integration and imaging sonar, combined with GLP (geometric linear mapping) and sector matching strategy, it realizes high-precision and high robustness underwater pose estimation.
+Fast-ISIO is a fast and robust sonar inertial odometey system for underwater robots. Through the tight coupling fusion of IMU pre integration and imaging sonar, combined with GLP (geometric linear projection) and sector matching strategy, it realizes high-precision and high robustness underwater pose estimation.
 
 ---
 
